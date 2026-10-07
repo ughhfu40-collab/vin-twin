@@ -1,0 +1,24 @@
+[
+  {
+    "id": "eta-001",
+    "occurred_at": 120,
+    "received_at": 120,
+    "source": "Демо-адаптер логистики",
+    "kind": "fact",
+    "event_type": "eta_updated",
+    "payload": {
+      "eta": 370
+    }
+  },
+  {
+    "id": "robot-001",
+    "occurred_at": 150,
+    "received_at": 120,
+    "source": "Сценарий диспетчера",
+    "kind": "assumption",
+    "event_type": "robot_down",
+    "payload": {
+      "duration": 40
+    }
+  }
+]

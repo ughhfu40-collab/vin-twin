@@ -1,0 +1,9 @@
+{
+  "name": "vin-twin-workspace",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "check": "bash scripts/check.sh"
+  }
+}

@@ -1,0 +1,1066 @@
+{
+  "version": "demo-v1",
+  "plan": 75,
+  "inventory": {
+    "A": 48,
+    "B": 6
+  },
+  "supply": {
+    "id": "batch-A-01",
+    "kit": "A",
+    "quantity": 40,
+    "eta": 270
+  },
+  "reorder_allowed": true,
+  "orders": [
+    {
+      "id": "VIN-001",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-002",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-003",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-004",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-005",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-006",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-007",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-008",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-009",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-010",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-011",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-012",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-013",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-014",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-015",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-016",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-017",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-018",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-019",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-020",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-021",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-022",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-023",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-024",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-025",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-026",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-027",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-028",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-029",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-030",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-031",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-032",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-033",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-034",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-035",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-036",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-037",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-038",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-039",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-040",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-041",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-042",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-043",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-044",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-045",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-046",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-047",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-048",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-049",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-050",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-051",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-052",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-053",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-054",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-055",
+      "kit": "B",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-056",
+      "kit": "B",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-057",
+      "kit": "B",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-058",
+      "kit": "B",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-059",
+      "kit": "B",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-060",
+      "kit": "B",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-061",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-062",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-063",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-064",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-065",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-066",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-067",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-068",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-069",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-070",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-071",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-072",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-073",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-074",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-075",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-076",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-077",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-078",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-079",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "VIN-080",
+      "kit": "A",
+      "model": "Demo Sedan",
+      "route": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    }
+  ],
+  "assumptions": [
+    "Учебная агрегированная модель, не реальные длительности АЛЛЮР.",
+    "Пустая линия в 08:00; шесть последовательных ресурсов, по 6 минут на операцию.",
+    "Буферы не ограничены, транспортное время равно нулю.",
+    "Все остальные детали доступны; нет ограничений переналадки и сроков заказа.",
+    "Перестановка VIN-049…060 разрешена только до их запуска.",
+    "Контроль проходят все VIN; брак и ремонт не моделируются.",
+    "Вклад 650 000 ₸ — демонстрационный параметр; эффект не подтверждённая прибыль."
+  ]
+}

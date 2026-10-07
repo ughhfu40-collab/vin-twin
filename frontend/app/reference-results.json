@@ -1,0 +1,38 @@
+{
+  "model_version": "1.1.0",
+  "delay": 100,
+  "contribution": 650000,
+  "baseline": 75,
+  "policies": [
+    {
+      "policy": "none",
+      "name": "Ничего не делать",
+      "cost": 0,
+      "output": 63,
+      "saved": 0,
+      "effect": 0,
+      "available": true,
+      "reason": ""
+    },
+    {
+      "policy": "delivery",
+      "name": "Срочная доставка",
+      "cost": 380000,
+      "output": 71,
+      "saved": 8,
+      "effect": 4820000,
+      "available": true,
+      "reason": ""
+    },
+    {
+      "policy": "reorder",
+      "name": "Перестановка VIN",
+      "cost": 90000,
+      "output": 69,
+      "saved": 6,
+      "effect": 3810000,
+      "available": true,
+      "reason": ""
+    }
+  ]
+}
