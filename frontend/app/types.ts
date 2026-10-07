@@ -92,6 +92,6 @@ export type Chat = {
   snapshot_id: string;
   intent: string;
   fact_refs: string[];
-  source_mode: string;
+  source_mode: "local";
   answer: string;
 };

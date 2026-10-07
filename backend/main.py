@@ -33,7 +33,7 @@ async def limit_body(request:Request,call_next):
 
 @app.get('/api/health')
 def health():
-    return {'status':'ok','model_version':'1.1.0','explanation_provider':'gemini' if os.getenv('GEMINI_API_KEY') else 'local'}
+    return {'status':'ok','model_version':'1.1.0','explanation_provider':'local'}
 
 @app.get('/api/state')
 def state():

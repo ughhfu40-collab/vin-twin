@@ -17,5 +17,4 @@ backend/data/runtime/
 
 **/.qa-bridge/
 
-.env-gemini.*
 .sites-runtime/

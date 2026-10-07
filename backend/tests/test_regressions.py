@@ -37,7 +37,6 @@ def test_early_receipt_or_eta_supported(kind):
         again=c.post('/api/simulate',json={'events':[e,e],'received_until':200}).json()
         assert again['frames']==s['frames'] and again['input_version']==s['input_version']
 def test_material_b_all_labels_and_chat(monkeypatch):
-    monkeypatch.delenv('GEMINI_API_KEY',raising=False)
     d=load_data();d['reorder_allowed']=False;d['inventory']={'A':74,'B':0};d['supply']['kit']='B';d['supply']['quantity']=6
     with TestClient(app) as c:
         s=c.post('/api/simulate',json={**BASE,'data':d}).json();wait=s['material_waits'][0]
@@ -55,7 +54,6 @@ def test_sensitivity(contribution,policy):
     assert next(r for r in s['sensitivity'] if r['contribution']==contribution)['recommended']==policy
     assert any(t['contribution']==145000 and {t['left'],t['right']}=={'delivery','reorder'} for t in s['thresholds'])
 def test_chat_change_and_vin(monkeypatch):
-    monkeypatch.delenv('GEMINI_API_KEY',raising=False)
     with TestClient(app) as c:
         before=c.post('/api/simulate',json=BASE).json();after=c.post('/api/simulate',json={**BASE,'robot_minutes':40}).json()
         answer=c.post('/api/chat',json={'snapshot_id':after['snapshot_id'],'previous_snapshot_id':before['snapshot_id'],'question':'Почему рекомендация изменилась?'}).json()
@@ -88,7 +86,6 @@ def test_zero_outage_no_false_pause():
 
 def test_snapshots_survive_cache_restart(monkeypatch):
     from backend.main import snapshots
-    monkeypatch.delenv('GEMINI_API_KEY',raising=False)
     with TestClient(app) as c:
         s=c.post('/api/simulate',json=BASE).json()
         snapshots.clear()

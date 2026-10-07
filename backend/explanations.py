@@ -1,7 +1,4 @@
-import json
-import os
 import re
-import httpx
 from .engine import clock, STATIONS, POLICIES
 
 INTENTS = {'risk':['waits','eta','incidents'], 'cause':['waits','eta','incidents'], 'vins':['affected','after_shift'],
@@ -15,9 +12,10 @@ def classify(question):
     if any(x in q for x in ['вклад','марж','порог','чувствитель','экономик']):return 'economics'
     if any(x in q for x in ['vin','вин','затрон']): return 'vins'
     if any(x in q for x in ['измен','помен']): return 'change'
-    if any(x in q for x in ['выгод','действ','лучше','рекоменд','делать']): return 'action'
+    if any(x in q for x in ['выгод','действ','лучше','рекоменд','делать','политик','выбрать']): return 'action'
     if any(x in q for x in ['почему','причин']): return 'cause'
-    return 'risk'
+    if any(x in q for x in ['риск','останов','когда','ожидан','задерж','постав','сбой','простой']):return 'risk'
+    return 'assumptions'
 
 def comparison(current,previous):
     if not previous:
@@ -85,18 +83,5 @@ async def explain(question,s,previous=None,time=120):
     id=f"VIN-{int(match.group(1)):03d}" if match else None
     s['facts']['vehicle']=next((v for v in s['vehicles'] if v['id']==id),None)
     intent=classify(question)
-    mode='local'
-    key=os.getenv('GEMINI_API_KEY')
-    if key and intent not in {'vehicle','change'}:
-        try:
-            model=os.getenv('GEMINI_MODEL','gemini-2.5-flash')
-            async with httpx.AsyncClient(timeout=4.0,trust_env=False) as client:
-                response=await client.post(f'https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent',
-                    headers={'x-goog-api-key':key},json={'contents':[{'parts':[{'text':json.dumps({'task':'Choose intent and fact_refs only. Return JSON {intent, fact_refs}.','allowed':INTENTS,'question':question,'facts':s['facts']},ensure_ascii=False)}]}], 'generationConfig':{'responseMimeType':'application/json','maxOutputTokens':250}})
-                response.raise_for_status()
-                obj=json.loads(response.json()['candidates'][0]['content']['parts'][0]['text'])
-                if obj['intent'] not in INTENTS or set(obj['fact_refs'])!=set(INTENTS[obj['intent']]):raise ValueError('Invalid fact references')
-                intent=obj['intent'];mode='gemini'
-        except (httpx.HTTPError, ValueError, KeyError, IndexError, TypeError):mode='local'
     return {'snapshot_id':s['snapshot_id'],'previous_snapshot_id':previous['snapshot_id'] if previous else None,
-            'intent':intent,'fact_refs':INTENTS[intent], 'source_mode':mode,'answer':render(intent,s,time)}
+            'intent':intent,'fact_refs':INTENTS[intent], 'source_mode':'local','answer':render(intent,s,time)}

@@ -350,7 +350,7 @@ export default function Dashboard() {
             }}
           >
             <Icon name="chat" />
-            ИИ-диспетчер<span className="tiny-tag">AI</span>
+            Диспетчер<span className="tiny-tag">ЛОКАЛЬНО</span>
           </button>
           <button
             className="nav-item"
@@ -1243,7 +1243,7 @@ export default function Dashboard() {
             aria-modal="true"
             aria-label={
               panel === "chat"
-                ? "ИИ-диспетчер"
+                ? "Диспетчер"
                 : panel === "report"
                   ? "Отчёт передачи смены"
                   : (selected ?? "Производственный ресурс")
@@ -1254,7 +1254,7 @@ export default function Dashboard() {
                 <span className="eyebrow">VIN-TWIN</span>
                 <h2>
                   {panel === "chat"
-                    ? "ИИ-диспетчер"
+                    ? "Диспетчер"
                     : panel === "report"
                       ? "Передача смены"
                       : (selected ?? frame?.stations[station ?? 0].name)}
@@ -1323,9 +1323,7 @@ export default function Dashboard() {
                 {chat && (
                   <div className="chat-answer">
                     <span className="tiny-tag">
-                      {chat.source_mode === "gemini"
-                        ? "GEMINI + ПРОВЕРЕННЫЕ ФАКТЫ"
-                        : "ЛОКАЛЬНОЕ ОБЪЯСНЕНИЕ"}
+                      ЛОКАЛЬНОЕ ОБЪЯСНЕНИЕ
                     </span>
                     <p>{chat.answer}</p>
                     <small>Ссылки на факты: {chat.fact_refs.join(", ")}</small>

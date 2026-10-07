@@ -89,24 +89,19 @@ def test_more_inventory_earlier_eta():
     assert schedule({**BASE,'delay':100},data)['output']>=schedule({**BASE,'delay':100})['output']
     assert schedule({**BASE,'delay':90})['output']>=schedule({**BASE,'delay':100})['output']
 
-@pytest.mark.parametrize('failure',['no_key','http_error','invalid_refs'])
-def test_llm_fallback(monkeypatch,failure):
+@pytest.mark.parametrize('question', ['Какое действие выгоднее?', 'Какую политику выбрать?', 'Что рекомендуешь сделать?'])
+def test_local_explanations_do_not_call_external_services(monkeypatch, question):
     import httpx
     s=snapshot({**BASE,'delay':100});s['snapshot_id']='test-snapshot'
-    monkeypatch.delenv('GEMINI_API_KEY',raising=False)
-    if failure!='no_key':
-        monkeypatch.setenv('GEMINI_API_KEY','test-key')
-        async def bad_post(*args,**kwargs):
-            if failure=='http_error':raise httpx.ReadTimeout('timeout')
-            return httpx.Response(200,json={'candidates':[{'content':{'parts':[{'text':'{"intent":"action","fact_refs":["invented"]}'}]}}]},request=httpx.Request('POST','https://example.test'))
-        monkeypatch.setattr(httpx.AsyncClient,'post',bad_post)
-    answer=asyncio.run(explain('Какое действие выгоднее?',s))
+    async def forbidden_request(*args,**kwargs):
+        raise AssertionError('External API requests are not allowed')
+    monkeypatch.setattr(httpx.AsyncClient,'request',forbidden_request)
+    answer=asyncio.run(explain(question,s))
     assert answer['source_mode']=='local'
     assert '71' in answer['answer'] and '4,820,000' in answer['answer']
     assert all(ref in s['facts'] for ref in answer['fact_refs'])
 
 def test_api_snapshots_report_validation(monkeypatch):
-    monkeypatch.delenv('GEMINI_API_KEY',raising=False)
     with TestClient(app) as client:
         assert client.get('/api/health').status_code==200
         assert client.get('/api/state').json()['data']['inventory']=={'A':48,'B':6}
@@ -136,3 +131,12 @@ def test_api_event_replay():
         b=client.post('/api/simulate',json={'events':events*2,'received_until':120}).json()
         assert a['output']==75 and b['output']==63
         assert b['params']['delay']==100 and b['params']['robot_minutes']==40
+
+
+def test_unknown_question_returns_model_assumptions():
+    s=snapshot(BASE);s['snapshot_id']='unknown-question'
+    answer=asyncio.run(explain('Привет, расскажи анекдот',s))
+    assert answer['source_mode']=='local'
+    assert answer['intent']=='assumptions'
+    assert answer['fact_refs']==['assumptions']
+    assert answer['answer']=='\n'.join(s['facts']['assumptions'])
