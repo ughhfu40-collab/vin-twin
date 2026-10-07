@@ -218,7 +218,7 @@ npm run dev
 
 Не вставляйте сам ключ в команды, README или публичные файлы. При новом окне PowerShell ввод нужно повторить. Команда `npm run dev` не читает корневой `.env` автоматически; на Windows используются переменные окружения.
 
-Модель по умолчанию — `gemini-2.5-flash`; при необходимости задайте `GEMINI_MODEL` в окружении backend. Доступ зависит от аккаунта провайдера. Реальный вызов пользовательского Gemini API в этой проверке не выполнялся.
+Модель по умолчанию — `gemini-2.5-flash`; при необходимости задайте `GEMINI_MODEL` в окружении backend. Доступ зависит от аккаунта провайдера. Интеграция Gemini предусматривает локальный fallback; реальный вызов API не проверен.
 
 ## Если что-то не запускается
 
@@ -247,7 +247,7 @@ npm run dev
 
 ## Проверки
 
-В подготовленной версии прошли **58 backend-тестов**, проверка TypeScript, production-сборка Next.js и проверка API через production-интерфейс.
+Проверки релиза: **58 backend-тестов**, TypeScript, production-сборка Next.js и проверка API через production-интерфейс.
 
 macOS/Linux:
 
@@ -264,7 +264,7 @@ npm run typecheck --prefix frontend
 npm run build --prefix frontend
 ```
 
-Нативный запуск на пользовательских Windows/macOS в среде разработки не проверялся. Подробности: [VERIFICATION.md](VERIFICATION.md).
+Нативный запуск на Windows/macOS не проверялся. Подробности: [VERIFICATION.md](VERIFICATION.md).
 
 ## Технологии и структура
 
@@ -338,7 +338,7 @@ npm start --prefix frontend
 docker compose up --build
 ```
 
-Сайт: http://localhost:3000. Backend доступен через frontend, отдельный внешний порт не опубликован; снимки сохраняются в volume. Конфигурация подготовлена, запуск Docker в среде разработки не проверен.
+Сайт: http://localhost:3000. Backend доступен через frontend, отдельный внешний порт не опубликован; снимки сохраняются в volume. Конфигурация Docker включена; запуск через Docker не проверен.
 
 ## Границы решения
 
