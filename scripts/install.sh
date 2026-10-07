@@ -3,7 +3,7 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 VIN_PYTHON="${VIN_PYTHON:-python3.12}"
 if ! command -v "$VIN_PYTHON" >/dev/null 2>&1; then
-  printf 'Python 3.12 is required. On macOS with Homebrew: brew install python@3.12\n' >&2
+  printf 'Python 3.12 is required. Install it from python.org (Homebrew is optional).\n' >&2
   printf 'Then run: bash scripts/install.sh\n' >&2
   exit 1
 fi

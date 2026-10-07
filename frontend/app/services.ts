@@ -23,11 +23,27 @@ export async function api<T>(
     const error = await response
       .json()
       .catch(() => ({ detail: "Ошибка сервера" }));
-    throw Error(
-      typeof error.detail === "string"
-        ? error.detail
-        : "Некорректные параметры или формат данных.",
-    );
+    if (typeof error.detail === "string") throw Error(error.detail);
+    if (Array.isArray(error.detail)) {
+      const labels: Record<string, string> = {
+        workdays: "Рабочие дни", excluded_minutes_per_shift: "Перерывы",
+        target_reject_percent: "Цель брака", ideal_cycle_minutes: "Идеальный цикл",
+        delay: "Задержка поставки", robot_minutes: "Длительность сбоя",
+        robot_start: "Начало сбоя", decision_time: "Время решения",
+        contribution: "Вклад автомобиля", question: "Вопрос",
+      };
+      const messages = error.detail.slice(0, 3).map((item: { loc?: string[]; type?: string; ctx?: Record<string, number> }) => {
+        const field = item.loc?.find(part => labels[part]);
+        const name = field ? labels[field] : "Параметры";
+        if (item.type === "greater_than_equal") return `${name}: минимум ${item.ctx?.ge}.`;
+        if (item.type === "less_than_equal") return `${name}: максимум ${item.ctx?.le}.`;
+        if (item.type === "int_type" || item.type === "int_parsing") return `${name}: введите целое число.`;
+        if (item.type === "string_too_short") return `${name}: заполните поле.`;
+        return `${name}: проверьте значение и формат.`;
+      });
+      throw Error(messages.join(" "));
+    }
+    throw Error("Некорректные параметры или формат данных.");
   }
   return response.json();
 }

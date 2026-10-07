@@ -3,7 +3,6 @@ from uuid import uuid4
 from pathlib import Path
 import json
 from hashlib import sha256
-import os
 from threading import RLock
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import JSONResponse

@@ -2,7 +2,7 @@ from typing import Literal, Annotated
 from pydantic import BaseModel, Field, ConfigDict, model_validator
 
 class StrictModel(BaseModel):
-    model_config = ConfigDict(extra='forbid')
+    model_config = ConfigDict(extra='forbid', str_strip_whitespace=True)
 
 class Inventory(StrictModel):
     A: Annotated[int, Field(strict=True, ge=0, le=1000)]
